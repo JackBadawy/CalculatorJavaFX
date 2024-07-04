@@ -43,3 +43,12 @@ This project is a calculator application built using JavaFX. The goal of this pr
    ```bash
    git clone git@github.com:JackBadawy/CalculatorJavaFX.git
    ```
+2. Open the project in your IDE.
+3. Ensure JavaFX SDK is configured in your project settings.
+4. Run the Main class to start the application.
+
+### Goals
+
+Gain hands-on experience with JavaFX.
+Better understand and implement generics in Java.
+Develop a visually appealing desktop application.
