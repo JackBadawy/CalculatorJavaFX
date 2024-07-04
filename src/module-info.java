@@ -1,7 +1,8 @@
 module CalculatorJavaFX {
-	requires javafx.controls;
-	requires javafx.fxml;
-	requires javafx.graphics;
-	
-	opens application to javafx.graphics, javafx.fxml;
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires transitive javafx.graphics;
+
+    opens application to javafx.fxml;
+    exports application;
 }

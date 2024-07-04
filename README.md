@@ -9,6 +9,8 @@ This project is a calculator application built using JavaFX. The goal of this pr
 - Basic calculator functionality (number input and display).
 - Simple and intuitive user interface designed with Scene Builder.
 - Dynamic number display based on button presses.
+- Basic arithmetic operations (addition, subtraction, multiplication, division).
+- Handling division by zero with appropriate error message display.
 
 ## Change Log
 
@@ -28,6 +30,19 @@ This project is a calculator application built using JavaFX. The goal of this pr
   - Prevented leading zeros in the display.
 - **Code Refinement**
   - Corrected string comparison in the `handleButtonAction` method using `.equals()` method.
+
+### [05/07/2024] - Update 2
+
+- **Arithmetic Operations**
+  - Added buttons for basic arithmetic operations (+, -, \*, /) and connected them to the controller.
+  - Implemented logic to handle arithmetic operations in `handleOperationButtonClick`.
+- **Switch Expression for Operations**
+  - Refactored `performMathsOperation` method to use a switch expression for cleaner code.
+  - Added error handling for division by zero and displayed appropriate error messages.
+- **Equals Button Logic**
+  - Implemented `handleEqualsClick` method to perform the arithmetic operation and display the result.
+  - Updated `currentInputNumber` after performing the operation to allow further calculations on the result.
+  - Added error handling for non-numeric input in `performMathsOperation`.
 
 ## Getting Started
 
