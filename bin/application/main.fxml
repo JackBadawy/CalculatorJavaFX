@@ -4,25 +4,50 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
-   <children>
-      <Button fx:id="btn1" layoutX="73.0" layoutY="79.0" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="1" />
-      <Button fx:id="btn2" layoutX="116.0" layoutY="79.0" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="2" />
-      <Button fx:id="btn3" layoutX="160.0" layoutY="79.0" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="3" />
-      <Button fx:id="btn4" layoutX="73.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="4" />
-      <Button fx:id="btn5" layoutX="116.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="5" />
-      <Button fx:id="btn6" layoutX="161.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="6" />
-      <Button fx:id="btn7" layoutX="73.0" layoutY="146.0" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="7" />
-      <Button fx:id="btn8" layoutX="116.0" layoutY="146.0" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="8" />
-      <Button fx:id="btn9" layoutX="161.0" layoutY="146.0" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="9" />
-      <Button fx:id="btn0" layoutX="73.0" layoutY="187.0" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="0" />
-      <Rectangle fx:id="numDisplay" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" layoutX="39.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-      <Text fx:id="displayText" layoutX="50.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-       <Button layoutX="213.0" layoutY="79.0" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="+" />
-      <Button layoutX="213.0" layoutY="146.0" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="/" />
-      <Button layoutX="213.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="-" />
-      <Button layoutX="211.0" layoutY="187.0" mnemonicParsing="false" text="=" onAction="#handleEqualsClick" />
-      <Button layoutX="214.0" layoutY="227.0" mnemonicParsing="false" text="c" onAction="#handleClearClick" />
-   </children>
+    <children>
+        <VBox spacing="10" alignment="CENTER" layoutX="0" layoutY="20" prefWidth="300">
+        <StackPane alignment="CENTER" prefWidth="200" prefHeight="26">
+            
+                <Rectangle fx:id="numDisplay" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" width="200.0" />
+                <Text fx:id="displayText" />
+                </StackPane>
+            
+            <HBox spacing="10" alignment="CENTER">
+                <VBox spacing="10" alignment="CENTER">
+                    <HBox spacing="10" alignment="CENTER">
+                        <Button fx:id="btn1" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="1" />
+                        <Button fx:id="btn2" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="2" />
+                        <Button fx:id="btn3" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="3" />
+                    </HBox>
+                    <HBox spacing="10" alignment="CENTER">
+                        <Button fx:id="btn4" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="4" />
+                        <Button fx:id="btn5" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="5" />
+                        <Button fx:id="btn6" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="6" />
+                    </HBox>
+                    <HBox spacing="10" alignment="CENTER">
+                        <Button fx:id="btn7" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="7" />
+                        <Button fx:id="btn8" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="8" />
+                        <Button fx:id="btn9" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="9" />
+                    </HBox>
+                    <HBox spacing="10" alignment="CENTER">
+                    <Button fx:id="btnDot" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="." />
+                        <Button fx:id="btn0" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="0" />
+                         <Button fx:id="btnEquals" mnemonicParsing="false" onAction="#handleEqualsClick" text="=" />
+                    </HBox>
+                </VBox>
+                <VBox spacing="10" alignment="CENTER">
+                    <Button fx:id="btnPlus" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="+" />
+                    <Button fx:id="btnMinus" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="-" />
+                    <Button fx:id="btnMultiply" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="*" />
+                    <Button fx:id="btnDivide" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="/" />
+                    <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handleClearClick" text="C" />
+                </VBox>
+            </HBox>
+        </VBox>
+    </children>
 </AnchorPane>

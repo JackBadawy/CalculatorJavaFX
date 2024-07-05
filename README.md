@@ -44,6 +44,18 @@ This project is a calculator application built using JavaFX. The goal of this pr
   - Updated `currentInputNumber` after performing the operation to allow further calculations on the result.
   - Added error handling for non-numeric input in `performMathsOperation`.
 
+### [07/07/2024] - Update 3
+
+- **Styling**
+  - Added `application.css` to style the calculator application.
+  - Set fixed size for buttons (40px width, 32px height) and styled buttons with grey background, white text, and rounded borders.
+- **Display Enhancements**
+  - Centered display text inside a rectangle using `StackPane`.
+  - Made display text bold for better visibility.
+- **Layout Improvements**
+  - Ensured all elements are horizontally centered within the window.
+  - Organized number buttons and operation buttons in a structured layout for better usability.
+
 ## Getting Started
 
 ### Prerequisites
