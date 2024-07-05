@@ -62,6 +62,13 @@ public class Controller {
     public void handleOperationButtonClick(javafx.event.ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
         currentOperation = clickedButton.getText().charAt(0);
+        if (currentOperation == 's' || currentOperation == '^') {
+            float result = performMathsOperation();
+            displayText.setText(Float.toString(result));
+            currentInputNumber.setLength(0);
+            currentInputNumber.append(result);
+            return;
+        }
         previousInputNumber.setLength(0);
         previousInputNumber.append(currentInputNumber);
         currentInputNumber.setLength(0); 
@@ -78,27 +85,78 @@ public class Controller {
 	}
 	
 	public float performMathsOperation() {
-        float num1 = Float.parseFloat(previousInputNumber.toString());
-        float num2 = Float.parseFloat(currentInputNumber.toString());
+		float num1 = previousInputNumber.length() > 0 ? Float.parseFloat(previousInputNumber.toString()) : 0;
+        float num2 = currentInputNumber.length() > 0 ? Float.parseFloat(currentInputNumber.toString()) : 0;
 
         return switch (currentOperation) {
             case '+' -> num1 + num2;
             case '-' -> num1 - num2;
             case '*' -> num1 * num2;
-            case '/' -> {
-                if (num2 != 0) {
-                    yield num1 / num2;
-                } else {
-                	displayText.setText("Cannot divide by zero");
-                    System.out.println("Cannot divide by zero");
-                    yield 0; 
-                }
-            }
+            case 's' -> num2 * num2;
+            case '^' -> (sqrtChecker(num2)) ? (float) Math.sqrt(num2) : handleInvalidSquareRoot();
+            case '/' -> (num2 != 0) ? num1 / num2 : handleDivideByZero();
             default -> {
                 System.out.println("Unknown operation: " + currentOperation);
                 yield 0; 
             }
         };
     }
+	
+	private boolean sqrtChecker(float base) {
+		if (base <= 0) {
+			return false;
+		}
+		return true;
+	}
+	
+	private float handleInvalidSquareRoot() {
+	    System.out.println("Cannot take square root of negative number");
+	    return 0;
+	}
+	
+	private float handleDivideByZero() {
+	    displayText.setText("Cannot divide by zero");
+	    System.out.println("Cannot divide by zero");
+	    return 0;
+	}
+	
+	 @FXML
+	    public void handleSquareClick() {
+	        if (currentInputNumber.length() > 0) {
+	            float num = Float.parseFloat(currentInputNumber.toString());
+	            num = num * num;
+	            currentInputNumber.setLength(0);
+	            currentInputNumber.append(num);
+	            renderDisplayedNumber();
+	        }
+	    }
+
+	    @FXML
+	    public void handleSquareRootClick() {
+	        if (currentInputNumber.length() > 0) {
+	            float num = Float.parseFloat(currentInputNumber.toString());
+	            if (num >= 0) {
+	                num = (float) Math.sqrt(num);
+	                currentInputNumber.setLength(0);
+	                currentInputNumber.append(num);
+	                renderDisplayedNumber();
+	            } else {
+	                displayText.setText("Invalid input for sqrt");
+	                System.out.println("Cannot take square root of negative number");
+	            }
+	        }
+	    }
+	
+	 @FXML
+	    public void handleToggleChargeClick() {
+	        if (currentInputNumber.length() > 0) {
+	            if (currentInputNumber.charAt(0) == '-') {
+	                currentInputNumber.deleteCharAt(0); 
+	            } else {
+	                currentInputNumber.insert(0, '-'); 
+	            }
+	            renderDisplayedNumber();
+	        }
+	    }
 	
 }

@@ -20,9 +20,9 @@
             <HBox spacing="10" alignment="CENTER">
                 <VBox spacing="10" alignment="CENTER">
                 <HBox spacing="10" alignment="CENTER">
-                        <Button fx:id="btnCharge" mnemonicParsing="false"  text="-/+" styleClass="darkBackground" />
-                        <Button fx:id="btnSqr" mnemonicParsing="false"  text="sqr" styleClass="darkBackground" />
-                        <Button fx:id="btnSqrRt" mnemonicParsing="false"  text="^2" styleClass="darkBackground" />
+                        <Button fx:id="btnCharge" mnemonicParsing="false"  text="-/+" styleClass="darkBackground" onAction="#handleToggleChargeClick" />
+                        <Button fx:id="btnSqr" mnemonicParsing="false"  text="sqr" styleClass="darkBackground" onAction="#handleOperationButtonClick" />
+                        <Button fx:id="btnSqrRt" mnemonicParsing="false"  text="^2" styleClass="darkBackground" onAction="#handleOperationButtonClick" />
                     </HBox>
                     <HBox spacing="10" alignment="CENTER">
                         <Button fx:id="btn1" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="1" />
