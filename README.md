@@ -44,7 +44,7 @@ This project is a calculator application built using JavaFX. The goal of this pr
   - Updated `currentInputNumber` after performing the operation to allow further calculations on the result.
   - Added error handling for non-numeric input in `performMathsOperation`.
 
-### [07/07/2024] - Update 3
+### [05/07/2024] - Update 3
 
 - **Styling**
   - Added `application.css` to style the calculator application.
@@ -55,6 +55,20 @@ This project is a calculator application built using JavaFX. The goal of this pr
 - **Layout Improvements**
   - Ensured all elements are horizontally centered within the window.
   - Organized number buttons and operation buttons in a structured layout for better usability.
+
+### [05/07/2024] - Update 4
+
+- **Enhanced Mathematical Operations**
+  - Added square root and squaring functionality.
+  - Ensured proper error handling for invalid operations (e.g., division by zero, square root of a negative number).
+- **User Interface Enhancements**
+  - Added custom title bar with close button and drag functionality.
+  - Styled the calculator buttons and display area using CSS.
+  - Ensured the user interface elements are properly aligned and centered.
+- **Testing**
+  - Added JUnit tests for controller logic.
+  - Implemented JavaFX environment initialization for tests.
+  - Added tests for handling equals, clear, and toggle charge functionalities.
 
 ## Getting Started
 
