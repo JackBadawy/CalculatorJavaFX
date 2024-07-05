@@ -19,6 +19,11 @@
             
             <HBox spacing="10" alignment="CENTER">
                 <VBox spacing="10" alignment="CENTER">
+                <HBox spacing="10" alignment="CENTER">
+                        <Button fx:id="btnCharge" mnemonicParsing="false"  text="-/+" styleClass="darkBackground" />
+                        <Button fx:id="btnSqr" mnemonicParsing="false"  text="sqr" styleClass="darkBackground" />
+                        <Button fx:id="btnSqrRt" mnemonicParsing="false"  text="^2" styleClass="darkBackground" />
+                    </HBox>
                     <HBox spacing="10" alignment="CENTER">
                         <Button fx:id="btn1" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="1" />
                         <Button fx:id="btn2" mnemonicParsing="false" onAction="#handleNumberButtonClick" text="2" />
@@ -41,11 +46,11 @@
                     </HBox>
                 </VBox>
                 <VBox spacing="10" alignment="CENTER">
-                    <Button fx:id="btnPlus" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="+" />
-                    <Button fx:id="btnMinus" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="-" />
-                    <Button fx:id="btnMultiply" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="*" />
-                    <Button fx:id="btnDivide" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="/" />
-                    <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handleClearClick" text="C" />
+                    <Button fx:id="btnPlus" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="+" styleClass="darkBackground" />
+                    <Button fx:id="btnMinus" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="-" styleClass="darkBackground" />
+                    <Button fx:id="btnMultiply" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="*" styleClass="darkBackground" />
+                    <Button fx:id="btnDivide" mnemonicParsing="false" onAction="#handleOperationButtonClick" text="/" styleClass="darkBackground" />
+                    <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handleClearClick" text="C" styleClass="darkBackground" />
                 </VBox>
             </HBox>
         </VBox>
