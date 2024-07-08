@@ -1,5 +1,7 @@
 # JavaFX Calculator Application
 
+![Screenshot](src.img.png)
+
 ## Overview
 
 This project is a calculator application built using JavaFX. The goal of this project is to become more familiar with Java,JavaFX, generics, and to create a visually appealing desktop application.
@@ -75,7 +77,7 @@ This project is a calculator application built using JavaFX. The goal of this pr
 
 ### Prerequisites
 
-- JDK 11 or higher
+- JDK 17 or higher
 - JavaFX SDK
 - IDE with JavaFX support (e.g., IntelliJ IDEA, Eclipse)
 
