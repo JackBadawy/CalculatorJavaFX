@@ -1,6 +1,6 @@
 # JavaFX Calculator Application
 
-![Screenshot](src/img.png)
+![Screenshot](src/img.PNG)
 
 ## Overview
 
