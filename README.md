@@ -7,6 +7,7 @@ This project is a calculator application built using JavaFX. The goal of this pr
 ## Features
 
 - Basic calculator functionality (number input and display).
+- Unit & e2e testing.
 - Simple and intuitive user interface designed with Scene Builder.
 - Dynamic number display based on button presses.
 - Basic arithmetic operations (addition, subtraction, multiplication, division).
@@ -68,7 +69,7 @@ This project is a calculator application built using JavaFX. The goal of this pr
 - **Testing**
   - Added JUnit tests for controller logic.
   - Implemented JavaFX environment initialization for tests.
-  - Added tests for handling equals, clear, and toggle charge functionalities.
+  - Added end-to-end tests for handling equals, clear, and toggle charge functionalities.
 
 ## Getting Started
 
