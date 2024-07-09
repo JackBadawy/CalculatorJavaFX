@@ -1,2 +1,2 @@
-Main-Class: application.Main
+Main-Class: application.FXStarter
 Class-Path: lib/javafx.controls.jar lib/javafx.fxml.jar lib/javafx.graphics.jar lib/javafx.base.jar

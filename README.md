@@ -13,7 +13,7 @@ This project is a calculator application built using JavaFX. The goal of this pr
 - Simple and intuitive user interface designed with Scene Builder.
 - Dynamic number display based on button presses.
 - Basic arithmetic operations (addition, subtraction, multiplication, division).
-- Handling division by zero with appropriate error message display.
+- Handling division by zero appropriately.
 
 ## Change Log
 
@@ -89,10 +89,11 @@ This project is a calculator application built using JavaFX. The goal of this pr
    ```
 2. Open the project in your IDE.
 3. Ensure JavaFX SDK is configured in your project settings.
-4. Run the Main class to start the application.
+4. Run the FXStarter class to start the application.
 
 ### Goals
 
 Gain hands-on experience with JavaFX.
 Better understand and implement generics in Java.
 Develop a visually appealing desktop application.
+Gain experience with Maven & managing dependencies.
