@@ -97,3 +97,6 @@ Gain hands-on experience with JavaFX.
 Better understand and implement generics in Java.
 Develop a visually appealing desktop application.
 Gain experience with Maven & managing dependencies.
+
+### Swing App
+click [here](https://github.com/JackBadawy/swing_calculator) to see version of the Calculator app built in swing for conparison purposes
